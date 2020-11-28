@@ -1,12 +1,21 @@
 .primary-screen {
-  background: url("../img/main-bg-desktop@1x.jpg") $primary-screen-bg center top no-repeat;
+  margin-bottom: 200px;
+  background-image: url("../img/main-bg-desktop@1x.jpg");
+  background-color: $primary-screen-bg;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 .primary-screen__container {
   min-height: 860px;
-  padding: 185px 75px 185px 715px;
+  padding-top: 185px;
+  padding-bottom: 185px;
+}
 
-  outline: 3px dashed darkred;
+.primary-screen__wrapper {
+  width: 410px;
+  margin-left: auto;
+  margin-right: 60px;
 }
 
 .primary-screen__title {
@@ -32,5 +41,87 @@
   .primary-screen {
     background-image: url("../img/main-bg-desktop@2x.jpg");
     background-size: 1920px 860px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .primary-screen {
+    margin-bottom: 80px;
+    background-image: url("../img/main-bg-tablet@1x.jpg");
+  }
+
+  .primary-screen__container {
+    min-height: 344px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .primary-screen__wrapper {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .primary-screen__title {
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: normal;
+  }
+
+  .primary-screen__desc {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .primary-screen__btn {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $tablet-width) and (min-resolution: 2dppx) {
+  .primary-screen {
+    background-image: url("../img/main-bg-tablet@2x.jpg");
+    background-size: 768px 344px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .primary-screen {
+    margin-bottom: 110px;
+    background:
+      url("../img/main-bg-mobile@1x.jpg") center top no-repeat,
+      linear-gradient(to bottom, $primary-screen-bg 235px, transparent 235px);
+  }
+
+  .primary-screen__container {
+    min-height: 235px;
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+
+  .primary-screen__wrapper {
+    width: 288px;
+
+    outline: 1px dashed royalblue;
+  }
+
+  .primary-screen__title {
+    margin-bottom: 103px;
+    font-size: 24px;
+  }
+
+  .primary-screen__desc {
+    margin-bottom: 20px;
+    color: $primary-screen-txt-alt;
+  }
+}
+
+@media (max-width: $mobile-width) and (min-resolution: 2dppx) {
+  .primary-screen {
+    background:
+      url("../img/main-bg-mobile@2x.jpg") center top / 320px 235px no-repeat,
+      linear-gradient(to bottom, $primary-screen-bg 235px, transparent 235px);
   }
 }
