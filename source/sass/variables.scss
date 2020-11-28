@@ -24,6 +24,10 @@ $desktop-width-only: 1024px;
 
 // Blocks
 
+$btn-txt: $white;
+$btn-bg: $site-brigth;
+$btn-bg-hover: $site;
+
 $page--txt: $black;
 $page--bg: $white;
 
@@ -36,3 +40,6 @@ $main-nav--link-tablet-arrow: $grey;
 $main-nav--link-tablet-arrow: $grey;
 $main-nav--bg-tablet: $white-almost;
 $main-nav--bg-tablet-active: $site;
+
+$primary-screen-txt: $white;
+$primary-screen-bg: $grey;

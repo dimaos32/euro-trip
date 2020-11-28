@@ -1,0 +1,36 @@
+.primary-screen {
+  background: url("../img/main-bg-desktop@1x.jpg") $primary-screen-bg center top no-repeat;
+}
+
+.primary-screen__container {
+  min-height: 860px;
+  padding: 185px 75px 185px 715px;
+
+  outline: 3px dashed darkred;
+}
+
+.primary-screen__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 1.45;
+  letter-spacing: -1.10667px;
+  color: $primary-screen-txt;
+}
+
+.primary-screen__desc {
+  width: 375px;
+  margin: 0;
+  margin-bottom: 40px;
+  line-height: 1.7;
+  letter-spacing: -0.466667px;
+  color: $primary-screen-txt;
+}
+
+@media (min-resolution: 2dppx) {
+  .primary-screen {
+    background-image: url("../img/main-bg-desktop@2x.jpg");
+    background-size: 1920px 860px;
+  }
+}
