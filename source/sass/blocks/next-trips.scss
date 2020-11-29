@@ -19,7 +19,7 @@
 
 .next-trips__tour {
   width: percentage(1 / 3);
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 .next-trips__tour-list {
@@ -45,5 +45,40 @@
 
   &:active {
     color: $next-trips--link-active;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .next-trips {
+    width: 375px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .next-trips {
+    width: 100%;
+    margin: 70px 0 5px;
+  }
+
+  .next-trips__title {
+    text-align: center;
+  }
+
+  .next-trips__tours {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .next-trips__tour {
+    width: 140px;
+    padding: 10px;
+    padding-top: 0;
+  }
+
+  .next-trips__link {
+    margin: 0 auto;
   }
 }
