@@ -5,6 +5,7 @@ $black: #141517;
 $black-coal: #2c2e3f;
 $grey-dark: #48494d;
 $grey: #96979f;
+$grey-ligth: #d7d9df;
 $white-almost: #fbf8f8;
 
 $white: #ffffff;
@@ -31,6 +32,13 @@ $btn-bg-hover: $site;
 $page--txt: $black;
 $page--bg: $white;
 
+$corporate-travel--txt: rgba($black, 0.5);
+
+$footer-contacts--link: $site-brigth;
+$footer-contacts--link-hover: $grey-ligth;
+$footer-contacts--link-active: $site;
+$footer-contacts--icon: $grey-ligth;
+
 $main-nav--link: $black;
 $main-nav--link-hover: $site-brigth;
 $main-nav--link-active: $site;
@@ -41,6 +49,12 @@ $main-nav--link-tablet-arrow: $grey;
 $main-nav--bg-tablet: $white-almost;
 $main-nav--bg-tablet-active: $site;
 
-$primary-screen-txt: $white;
-$primary-screen-txt-alt: $black-coal;
-$primary-screen-bg: $grey;
+$next-trips--link: rgba($black, 0.5);
+$next-trips--link-hover: $site-brigth;
+$next-trips--link-active: $site;
+
+$page-footer--border: $grey-ligth;
+
+$primary-screen--txt: $white;
+$primary-screen--txt-alt: $black-coal;
+$primary-screen--bg: $grey;

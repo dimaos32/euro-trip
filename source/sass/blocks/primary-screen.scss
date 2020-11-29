@@ -1,7 +1,7 @@
 .primary-screen {
   margin-bottom: 200px;
   background-image: url("../img/main-bg-desktop@1x.jpg");
-  background-color: $primary-screen-bg;
+  background-color: $primary-screen--bg;
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -25,7 +25,7 @@
   font-size: 55px;
   line-height: 1.45;
   letter-spacing: -1.10667px;
-  color: $primary-screen-txt;
+  color: $primary-screen--txt;
 }
 
 .primary-screen__desc {
@@ -34,7 +34,7 @@
   margin-bottom: 40px;
   line-height: 1.7;
   letter-spacing: -0.466667px;
-  color: $primary-screen-txt;
+  color: $primary-screen--txt;
 }
 
 @media (min-resolution: 2dppx) {
@@ -92,7 +92,7 @@
     margin-bottom: 110px;
     background:
       url("../img/main-bg-mobile@1x.jpg") center top no-repeat,
-      linear-gradient(to bottom, $primary-screen-bg 235px, transparent 235px);
+      linear-gradient(to bottom, $primary-screen--bg 235px, transparent 235px);
   }
 
   .primary-screen__container {
@@ -114,7 +114,7 @@
 
   .primary-screen__desc {
     margin-bottom: 20px;
-    color: $primary-screen-txt-alt;
+    color: $primary-screen--txt-alt;
   }
 }
 
@@ -122,6 +122,6 @@
   .primary-screen {
     background:
       url("../img/main-bg-mobile@2x.jpg") center top / 320px 235px no-repeat,
-      linear-gradient(to bottom, $primary-screen-bg 235px, transparent 235px);
+      linear-gradient(to bottom, $primary-screen--bg 235px, transparent 235px);
   }
 }
