@@ -50,9 +50,30 @@
   }
 }
 
-@media (min-width: $desktop-width-only-special) {
+@media (min-width: $desktop-width-only) {
   .countries {
     min-height: 1089px + 149px;
     background: url("../../img/map-south-europe.svg") center 149px no-repeat;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .countries__tabs-wrapper {
+    margin: 0;
+    margin-bottom: 35px;
+  }
+
+  .countries__tabs {
+    overflow: hidden;
+  }
+
+  .countries__tab:not(:last-of-type) {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .countries__tabs-wrapper {
+    margin-bottom: 25px;
   }
 }
