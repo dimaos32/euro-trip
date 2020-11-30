@@ -3,11 +3,11 @@
   flex-direction: column;
   width: 370px;
   min-height: 670px;
+  height: 100%;
   padding: 30px;
   padding-top: 40px;
   background-color: $offer-card--bg;
   border: 1px solid $offer-card--border;
-  box-sizing: border-box;
   border-radius: 6px;
 
   &:hover {
@@ -72,7 +72,7 @@
   color: $offer-card--txt;
 }
 
-.offer-card__icon-phone {
+.offer-card__icon-check {
   margin-left: 5px;
   margin-right: 10px;
   fill: $offer-card--icon;
@@ -84,4 +84,41 @@
 
 .offer-card__btn {
   margin-top: auto;
+}
+
+@media (max-width: $tablet-width) {
+  .offer-card {
+    width: 288px;
+    min-height: 630px;
+    padding: 30px 20px 2px;
+
+    &:hover {
+      padding: 28px 18px 0;
+    }
+  }
+
+  .offer-card__header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 11px;
+  }
+
+  .offer-card__title {
+    font-size: 24px;
+    line-height: 1.6;
+  }
+
+  .offer-card__desc {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .offer-card__item {
+    margin-bottom: 10px;
+  }
+
+  .offer-card__btn {
+    margin: auto -21px -3px;
+  }
 }

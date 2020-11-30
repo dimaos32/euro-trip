@@ -1,13 +1,12 @@
 .cost {
   margin-top: -270px;
+  margin-bottom: 140px;
 }
 
 .cost__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  outline: 4px dashed greenyellow;
 }
 
 .cost__info {
@@ -53,12 +52,12 @@
   line-height: 1.6;
   text-decoration-line: underline;
   text-decoration-skip-ink: none;
-  color: $cost--link;
+  color: $cost--link-hover;
   outline: none;
 
   &:hover,
   &:focus {
-    color: $cost--link-hover;
+    color: $cost--link;
   }
 
   &:active {
@@ -69,12 +68,9 @@
     }
   }
 
-  svg {
+  .cost__icon-phone {
     display: block;
     margin-right: 15px;
-  }
-
-  .cost__icon-phone {
     fill: none;
     stroke: $cost--icon;
     stroke-width: 2;
@@ -121,5 +117,93 @@
       height: 3px;
       background-color: $cost--decor;
     }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .cost {
+    margin-top: 110px;
+    margin-bottom: 125px;
+  }
+
+  .cost__info {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .cost__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  .cost__desc {
+    margin-bottom: 30px;
+    line-height: 1.7;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  .cost__action {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.9;
+    text-align: center;
+  }
+
+  .cost__link {
+    margin: 0 auto;
+    height: auto;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: $cost--link;
+
+    &:hover,
+    &:focus {
+      color: $cost--link-hover;
+    }
+
+    &:active {
+      color: $cost--link-active;
+    }
+
+    .cost__icon-phone {
+      display: none;
+    }
+  }
+
+  .cost__offers {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .cost {
+    margin-bottom: 30px;
+  }
+
+  .cost__info {
+    margin-bottom: 30px;
+  }
+
+  .cost__title {
+    font-size: 24px;
+  }
+
+  .cost__desc {
+    margin-bottom: 20px;
+  }
+
+  .cost__offers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cost__offer {
+    margin-bottom: 20px;
   }
 }

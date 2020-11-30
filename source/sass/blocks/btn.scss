@@ -48,16 +48,16 @@
       transform: translateY(-50%);
     }
   }
+
+  &--offer-card {
+    width: 100%;
+  }
 }
 
 @media (min-width: $desktop-width-only) {
   .btn {
     &--primary-screen {
       width: 340px;
-    }
-
-    &--offer-card {
-      width: 100%;
     }
   }
 }
@@ -71,6 +71,9 @@
 
     &--primary-screen::after {
       background-image: url("../img/icon-arrow-thin.svg");
+    }
+    &--offer-card {
+      width: calc(100% + 2 * 21px);
     }
   }
 }
