@@ -26,14 +26,29 @@ $desktop-width-only-special: 1200px;
 
 // Blocks
 
-$btn-txt: $white;
-$btn-bg: $site-brigth;
-$btn-bg-hover: $site;
+$btn--txt: $white;
+$btn--txt-active: $site;
+$btn--bg: $site-brigth;
+$btn--bg-hover: $site;
 
 $page--txt: $black;
 $page--bg: $white;
 
 $corporate-travel--txt: rgba($black, 0.5);
+
+$countries--tabs-link: rgba($black-coal, 0.3);
+$countries--tabs-link-hover: $site-brigth;
+$countries--tabs-link-active: $site;
+$countries--tabs-border: rgba($black-coal, 0.3);
+
+$country-slide--txt: rgba($black-coal, 0.7);
+$country-slide--title: $black-coal;
+$country-slide--decor: $site-brigth;
+
+$feedback--txt: rgba($black-coal, 0.7);
+$feedback--title: $black-coal;
+$feedback--bg: $white;
+$feedback--decor: $site-brigth;
 
 $footer-contacts--link: $site-brigth;
 $footer-contacts--link-hover: $grey-ligth;

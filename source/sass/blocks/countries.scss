@@ -1,0 +1,58 @@
+.countries__tabs-wrapper {
+  margin-right: 270px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid $countries--tabs-border;
+}
+
+.countries__tabs {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
+}
+
+.countries__tab-link {
+  display: block;
+  padding: 15px 10px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.415px;
+  color: $countries--tabs-link;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $countries--tabs-link-hover;
+  }
+
+  &:active {
+    color: $countries--tabs-link-active;
+  }
+
+  &--current {
+    color: $countries--tabs-link-hover;
+  }
+}
+
+.countries__slides {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.countries__slide {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width-only-special) {
+  .countries {
+    min-height: 1089px + 149px;
+    background: url("../../img/map-south-europe.svg") center 149px no-repeat;
+  }
+}

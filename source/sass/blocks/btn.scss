@@ -1,7 +1,7 @@
 .btn {
   display: block;
   width: 250px;
-  padding: 30px 40px;
+  padding: 30px;
   font-family: $montserrat;
   font-style: normal;
   font-weight: 700;
@@ -10,14 +10,30 @@
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: $btn-txt;
-  background-color: $btn-bg;
+  color: $btn--txt;
+  background-color: $btn--bg;
   border: none;
   outline: none;
 
+  &:hover,
+  &:focus {
+    background-color: $btn--bg-hover;
+    transition: background-color 0.3s ease;
+  }
+
+  &:active {
+    color: $btn--txt-active;
+    background-color: transparent;
+  }
+
   &--primary-screen {
     position: relative;
+    padding: 30px 40px;
     text-align: left;
+
+    &:active {
+      color: $btn--txt;
+    }
 
     &::after {
       position: absolute;
@@ -36,16 +52,6 @@
 
 @media (min-width: $desktop-width-only) {
   .btn {
-    &:hover,
-    &:focus {
-      background-color: $btn-bg-hover;
-      transition: background-color 0.3s ease;
-    }
-
-    &:active {
-      background-color: transparent;
-    }
-
     &--primary-screen {
       width: 340px;
     }
