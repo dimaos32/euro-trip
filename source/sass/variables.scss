@@ -36,6 +36,14 @@ $page--bg: $white;
 
 $corporate-travel--txt: rgba($black, 0.5);
 
+$cost--txt: rgba($black-coal, 0.7);
+$cost--link: $black;
+$cost--link-hover: $site-brigth;
+$cost--link-active: $site;
+$cost--icon: $site-brigth;
+$cost--title: $black-coal;
+$cost--decor: $site-brigth;
+
 $countries--tabs-link: rgba($black-coal, 0.3);
 $countries--tabs-link-hover: $site-brigth;
 $countries--tabs-link-active: $site;
@@ -81,6 +89,16 @@ $main-nav--bg-tablet-active: $site;
 $next-trips--link: rgba($black, 0.5);
 $next-trips--link-hover: $site-brigth;
 $next-trips--link-active: $site;
+
+$offer-card--txt: $black-coal;
+$offer-card--txt-border: rgba($black-coal, 0.3);
+$offer-card--header: rgba($black, 0.7);
+$offer-card--header-hover: $site-brigth;
+$offer-card--bg: rgba($white, 0.13);
+$offer-card--border: rgba($black-coal, 0.04);
+$offer-card--border-hover: $site-brigth;
+$offer-card--icon: $site-brigth;
+$offer-card--icon-hover: $black;
 
 $page-footer--border: $grey-ligth;
 

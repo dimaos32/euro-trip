@@ -393,7 +393,7 @@
 </section>
 
 <section class="cost">
-  <div class="container">
+  <div class="cost__container container">
 
     <div class="cost__info">
       <h2 class="cost__title">Цены</h2>
@@ -401,17 +401,22 @@
         Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!
       </p>
       <p class="cost__action">Свяжитесь с нами</p>
-      <a href="tel:+749978468446" aria-label="Позвонить нам">+7 (499) -784-684-46</a>
+      <a class="cost__link" href="tel:+749978468446" aria-label="Позвонить нам">
+        <svg class="cost__icon-phone" width="30" height="30">
+          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+        </svg>
+        <p>+7 (499) -784-684-46</p>
+      </a>
     </div>
 
     <ul class="cost__offers">
       <li class="cost__offer">
         <article class="offer-card">
-          <div class="offer-card__header">
+          <header class="offer-card__header">
             <h3 class="offer-card__title">Комплексный</h3>
 
             <p class="offer-card__price">$1999</p>
-          </div>
+          </header>
 
           <p class="offer-card__desc">
             Ознакомьтесь с перечнем того, что входит в данный пакет
@@ -419,33 +424,45 @@
 
           <ul class="offer-card__list">
             <li class="offer-card__item">
+              <svg class="offer-card__icon-phone" width="14" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-check"></use>
+              </svg>
               Разработанный маршрут с гидом группы
             </li>
 
             <li class="offer-card__item">
+              <svg class="offer-card__icon-phone" width="14" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-check"></use>
+              </svg>
               Перелет, трансфер и проживание в отелях
             </li>
 
             <li class="offer-card__item">
+              <svg class="offer-card__icon-phone" width="14" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-check"></use>
+              </svg>
               Завтраки, ужины в отелях и ланчи на природе
             </li>
 
             <li class="offer-card__item">
+              <svg class="offer-card__icon-phone" width="14" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-check"></use>
+              </svg>
               Экскурсии по удивительно красивым местам Европы
             </li>
           </ul>
 
-          <a class="offer-card__btn btn" href="#">Купить тур сейчас</a>
+          <a class="offer-card__btn btn btn--offer-card" href="#">Купить тур сейчас</a>
         </article>
       </li>
 
       <li class="cost__offer">
         <article class="offer-card">
-          <div class="offer-card__header">
+          <header class="offer-card__header">
             <h3 class="offer-card__title">Экономный</h3>
 
             <p class="offer-card__price">$1399</p>
-          </div>
+          </header>
 
           <p class="offer-card__desc">
             Ознакомьтесь с перечнем того, что входит в данный пакет
@@ -453,27 +470,42 @@
 
           <ul class="offer-card__list">
             <li class="offer-card__item">
+              <svg class="offer-card__icon-phone" width="14" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-check"></use>
+              </svg>
               Разработанный маршрут с гидом группы
             </li>
 
             <li class="offer-card__item">
+              <svg class="offer-card__icon-phone" width="14" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-check"></use>
+              </svg>
               Перелет и трансфер
             </li>
 
             <li class="offer-card__item">
+              <svg class="offer-card__icon-phone" width="14" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-check"></use>
+              </svg>
               Проживание в хостелах при отелях
             </li>
 
             <li class="offer-card__item">
+              <svg class="offer-card__icon-phone" width="14" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-check"></use>
+              </svg>
               Только завтраки в отелях
             </li>
 
             <li class="offer-card__item">
+              <svg class="offer-card__icon-phone" width="14" height="12">
+                <use xlink:href="img/sprite_auto.svg#icon-check"></use>
+              </svg>
               Экскурсии по удивительно красивым местам Европы
             </li>
           </ul>
 
-          <a class="offer-card__btn btn" href="#">Купить тур сейчас</a>
+          <a class="offer-card__btn btn btn--offer-card" href="#">Купить тур сейчас</a>
         </article>
       </li>
     </ul>
