@@ -32,6 +32,14 @@ $btn--txt-active: $site;
 $btn--bg: $site-brigth;
 $btn--bg-hover: $site;
 
+$modal--txt: $grey-dark;
+$modal--bg: $white-almost;
+$modal--form-bg: $white;
+$modal--form-border: rgba($black-coal, 0.3);
+$modal--form-border-invalid: $site;
+$write-us--form-shadow: rgba($black-nigth, 0.1);
+$modal--form-decor: $site-brigth;
+
 $page--txt: $black;
 $page--bg: $white;
 
@@ -52,6 +60,7 @@ $countries--tabs-border: rgba($black-coal, 0.3);
 
 $country-slide--txt: rgba($black-coal, 0.7);
 $country-slide--title: $black-coal;
+$country-slide--bg: $white-almost;
 $country-slide--decor: $site-brigth;
 
 $feedback--txt: rgba($black-coal, 0.7);
