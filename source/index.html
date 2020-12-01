@@ -512,30 +512,35 @@
   </div>
 </section>
 
-<section class="feedback">
-  <div class="container">
-    <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST">
-      <h2 class="feedback__title">У Вас остались вопросы?</h2>
+<section class="write-us">
+  <div class="write-us__container container">
+    <div class="write-us__wrapper">
+      <form class="write-us__form" action="https://echo.htmlacademy.ru" method="POST">
+        <h2 class="write-us__title">У Вас остались вопросы?</h2>
 
-      <p class="feedback__desc">
-        Оставьте свой номер или e-mail и мы свяжемся с Вами
-      </p>
+        <p class="write-us__desc">
+          Оставьте свой номер или e-mail и мы свяжемся с Вами
+        </p>
 
-      <div class="feedback__inputs">
-        <label>
-          <span class="visually-hidden">Телефон:</span>
-          <input type="tel" name="phone" placeholder="Введите 10 цифр номера" required>
-        </label>
+        <ul class="write-us__inputs-list">
+          <li class="write-us__inputs-item">
+            <label class="write-us__label write-us__label--phone">
+              <span class="visually-hidden">Телефон:</span>
+              <input class="write-us__input" type="tel" name="phone" placeholder="Введите 10 цифр номера" pattern="\d{10}" required>
+            </label>
+          </li>
 
-        <label>
-          <span class="visually-hidden">E-mail:</span>
-          <input type="email" name="email" placeholder="E-mail">
-        </label>
-      </div>
+          <li class="write-us__inputs-item">
+            <label class="write-us__label">
+              <span class="visually-hidden">E-mail:</span>
+              <input class="write-us__input" type="email" name="email" placeholder="E-mail">
+            </label>
+          </li>
+        </ul>
 
-      <button class="feedback__btn btn" type="submit">Отправить</button>
-
-    </form>
+        <button class="write-us__btn btn btn--write-us" type="submit">Отправить</button>
+      </form>
+    </div>
   </div>
 </section>
 

@@ -52,6 +52,11 @@
   &--offer-card {
     width: 100%;
   }
+
+  &--write-us {
+    width: 175px;
+    padding: 17px 30px;
+  }
 }
 
 @media (min-width: $desktop-width-only) {

@@ -2,6 +2,7 @@
 
 $black: #141517;
 
+$black-nigth: #293642;
 $black-coal: #2c2e3f;
 $grey-dark: #48494d;
 $grey: #96979f;
@@ -105,3 +106,10 @@ $page-footer--border: $grey-ligth;
 $primary-screen--txt: $white;
 $primary-screen--txt-alt: $black-coal;
 $primary-screen--bg: $grey;
+
+$write-us--bg: $white-almost;
+$write-us--form-bg: $white;
+$write-us--form-border: rgba($black-coal, 0.3);
+$write-us--form-border-invalid: $site;
+$write-us--form-shadow: rgba($black-nigth, 0.1);
+$write-us--form-decor: $site-brigth;

@@ -59,7 +59,8 @@
 @media (max-width: $mobile-width) {
   .next-trips {
     width: 100%;
-    margin: 70px 0 5px;
+    margin: 0;
+    margin-bottom: 5px;
   }
 
   .next-trips__title {
