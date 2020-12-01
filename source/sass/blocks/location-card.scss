@@ -24,6 +24,9 @@
 
 .location-card__img {
   display: block;
+  width: 350px;
+  height: 430px;
+  background-color: $locations--bg;
 }
 
 .location-card__overlay {
@@ -60,5 +63,12 @@
   .location-card:active & {
     color: $location-card--hint-txt-active;
     border: 1px solid $location-card--hint-border-active;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .location-card__img {
+    width: 288px;
+    height: 425px;
   }
 }
