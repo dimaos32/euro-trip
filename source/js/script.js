@@ -22,6 +22,21 @@ var closeMenu = function () {
   document.removeEventListener('keydown', onOpenMenuEscPress);
 };
 
+var changeSlide = function (newSlideId) {
+  var currentSlide = slideList.querySelector('.countries__slide--current');
+
+  var newSlide;
+
+  for (var slide of slides) {
+    if (slide.dataset.id === newSlideId) {
+      newSlide = slide;
+    };
+  }
+
+  currentSlide.classList.remove('countries__slide--current');
+  newSlide.classList.add('countries__slide--current');
+}
+
 var onOutsideMenuPress = function () {
   closeMenu();
 };
@@ -37,22 +52,11 @@ var onSlideListClick = function (evt) {
   evt.preventDefault();
 
   var currentTab = tabList.querySelector('.countries__tab-link--current');
-  var currentSlide = slideList.querySelector('.countries__slide--current');
 
   currentTab.classList.remove('countries__tab-link--current');
   evt.target.classList.add('countries__tab-link--current');
 
-  var newSlideId = evt.target.dataset.id;
-  var newSlide;
-
-  for (var slide of slides) {
-    if (slide.dataset.id === newSlideId) {
-      newSlide = slide;
-    };
-  }
-
-  currentSlide.classList.remove('countries__slide--current');
-  newSlide.classList.add('countries__slide--current');
+  changeSlide(evt.target.dataset.id);
 };
 
 mainNav.classList.remove('main-nav--nojs');
