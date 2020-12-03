@@ -25,6 +25,26 @@ var closeMenu = function () {
   document.removeEventListener('keydown', onOpenMenuEscPress);
 };
 
+var getNewActiveTab = function (newTabId) {
+  var newTab;
+
+  for (var tab of tabs) {
+    if (tab.dataset.id === newTabId) {
+      newTab = tab;
+      break;
+    };
+  }
+
+  return newTab;
+}
+
+var changeActiveTab = function (newActiveTab) {
+  var currentTab = tabList.querySelector('.countries__tab-link--current');
+
+  currentTab.classList.remove('countries__tab-link--current');
+  newActiveTab.classList.add('countries__tab-link--current');
+}
+
 var changeSlide = function (newSlideId) {
   var currentSlide = slideList.querySelector('.countries__slide--current');
 
@@ -33,6 +53,7 @@ var changeSlide = function (newSlideId) {
   for (var slide of slides) {
     if (slide.dataset.id === newSlideId) {
       newSlide = slide;
+      break;
     };
   }
 
@@ -51,33 +72,18 @@ var onOpenMenuEscPress = function (evt) {
   }
 };
 
+var onlocationCardClick = function (evt) {
+  var newTabId = evt.target.closest('.location-card').dataset.id;
+
+  changeActiveTab(getNewActiveTab(newTabId));
+  changeSlide(newTabId);
+};
+
 var onSlideListClick = function (evt) {
   evt.preventDefault();
 
-  var currentTab = tabList.querySelector('.countries__tab-link--current');
-
-  currentTab.classList.remove('countries__tab-link--current');
-  evt.target.classList.add('countries__tab-link--current');
-
+  changeActiveTab(evt.target);
   changeSlide(evt.target.dataset.id);
-};
-
-var  onlocationCardClick = function (evt) {
-  var newTabId = evt.target.closest('.location-card').dataset.id;
-  var newTab;
-
-  for (var tab of tabs) {
-    if (tab.dataset.id === newTabId) {
-      newTab = tab;
-    };
-  }
-
-  var currentTab = tabList.querySelector('.countries__tab-link--current');
-
-  currentTab.classList.remove('countries__tab-link--current');
-  newTab.classList.add('countries__tab-link--current');
-
-  changeSlide(newTabId);
 };
 
 mainNav.classList.remove('main-nav--nojs');
