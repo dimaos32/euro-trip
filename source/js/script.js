@@ -12,17 +12,22 @@ var slides = slideList.querySelectorAll('.countries__slide');
 
 var offers = document.querySelector('.cost__offers');
 
+var buyFormTemplate = document.querySelector('#buy-now')
+  .content
+  .querySelector('.modal');
+var modal;
+
 var openMenu = function () {
   mainNav.classList.remove('main-nav--closed');
   mainNav.classList.add('main-nav--opened');
-  mainNavList.addEventListener('click', onOutsideMenuPress);
+  mainNavList.addEventListener('click', onOutsideMenuClick);
   document.addEventListener('keydown', onOpenMenuEscPress);
 };
 
 var closeMenu = function () {
   mainNav.classList.remove('main-nav--opened');
   mainNav.classList.add('main-nav--closed');
-  mainNavList.removeEventListener('click', onOutsideMenuPress);
+  mainNavList.removeEventListener('click', onOutsideMenuClick);
   document.removeEventListener('keydown', onOpenMenuEscPress);
 };
 
@@ -62,7 +67,7 @@ var changeSlide = function (newSlideId) {
   newSlide.classList.add('countries__slide--current');
 }
 
-var onOutsideMenuPress = function () {
+var onOutsideMenuClick = function () {
   closeMenu();
 };
 
@@ -91,6 +96,44 @@ var onSlideListClick = function (evt) {
   }
 };
 
+var removeModal = function () {
+  modal.remove();
+
+  document.removeEventListener('click', onOpenModalEscPress);
+}
+
+var onModalCloseBtnClick = function () {
+  removeModal();
+}
+
+var onOutsideModalContentClick = function (evt) {
+  if (!evt.target.closest('.modal__content')) {
+    removeModal();
+  }
+}
+
+var onOpenModalEscPress = function (evt) {
+  if (evt.key === 'Escape') {
+    evt.preventDefault();
+    removeModal();
+  }
+}
+
+var onBuyBtnClick = function (evt) {
+  if (evt.target.classList.contains('js-buy-btn')) {
+    evt.preventDefault();
+
+    modal = buyFormTemplate.cloneNode(true);
+    var modalCloseBtn = modal.querySelector('.modal__close-btn');
+
+    document.body.append(modal);
+
+    modalCloseBtn.addEventListener('click', onModalCloseBtnClick);
+    modal.addEventListener('click', onOutsideModalContentClick);
+    document.addEventListener('keydown', onOpenModalEscPress);
+  }
+};
+
 mainNav.classList.remove('main-nav--nojs');
 mainNav.classList.add('main-nav--closed');
 
@@ -104,3 +147,5 @@ mainNavToggle.addEventListener('click', function () {
 
 locationList.addEventListener('click', onlocationCardClick);
 tabList.addEventListener('click', onSlideListClick);
+offers.addEventListener('click', onBuyBtnClick);
+slideList.addEventListener('click', onBuyBtnClick);

@@ -192,7 +192,7 @@
               На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
             </p>
 
-            <a class="country-slide__btn btn" href="#">Купить тур сейчас</a>
+            <a class="country-slide__btn btn js-buy-btn" href="#">Купить тур сейчас</a>
           </div>
 
           <div class="country-slide__media">
@@ -234,7 +234,7 @@
               В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.
             </p>
 
-            <a class="country-slide__btn btn" href="#">Купить тур сейчас</a>
+            <a class="country-slide__btn btn js-buy-btn" href="#">Купить тур сейчас</a>
           </div>
 
           <div class="country-slide__media">
@@ -276,7 +276,7 @@
               В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.
             </p>
 
-            <a class="country-slide__btn btn" href="#">Купить тур сейчас</a>
+            <a class="country-slide__btn btn js-buy-btn" href="#">Купить тур сейчас</a>
           </div>
 
           <div class="country-slide__media">
@@ -318,7 +318,7 @@
               Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
             </p>
 
-            <a class="country-slide__btn btn" href="#">Купить тур сейчас</a>
+            <a class="country-slide__btn btn js-buy-btn" href="#">Купить тур сейчас</a>
           </div>
 
           <div class="country-slide__media">
@@ -360,7 +360,7 @@
               В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.
             </p>
 
-            <a class="country-slide__btn btn" href="#">Купить тур сейчас</a>
+            <a class="country-slide__btn btn js-buy-btn" href="#">Купить тур сейчас</a>
           </div>
 
           <div class="country-slide__media">
@@ -457,7 +457,7 @@
             </li>
           </ul>
 
-          <a class="offer-card__btn btn btn--offer-card" href="#">Купить тур сейчас</a>
+          <a class="offer-card__btn btn btn--offer-card js-buy-btn" href="#">Купить тур сейчас</a>
         </article>
       </li>
 
@@ -510,7 +510,7 @@
             </li>
           </ul>
 
-          <a class="offer-card__btn btn btn--offer-card" href="#">Купить тур сейчас</a>
+          <a class="offer-card__btn btn btn--offer-card js-buy-btn" href="#">Купить тур сейчас</a>
         </article>
       </li>
     </ul>
@@ -649,35 +649,44 @@
   </div>
 </footer>
 
-<div class="modal modal--buy-now">
-  <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
-    <h2 class="modal__title">Купить тур</h2>
+<template id="buy-now">
+  <div class="modal">
+    <div class="modal__content modal__content--buy-now">
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
+        <h2 class="modal__title">Купить тур</h2>
 
-    <ul class="modal__inputs-list">
-      <li class="modal__inputs-item">
-        <label class="modal__label modal__label--phone">
-          <span class="visually-hidden">Телефон:</span>
-          <input class="modal__input" type="tel" name="phone" placeholder="Введите 10 цифр номера" pattern="\d{10}" required>
-        </label>
-      </li>
+        <ul class="modal__inputs-list">
+          <li class="modal__inputs-item">
+            <label class="modal__label modal__label--phone">
+              <span class="visually-hidden">Телефон:</span>
+              <input class="modal__input" type="tel" name="phone" placeholder="Введите 10 цифр номера" pattern="\d{10}" required>
+            </label>
+          </li>
 
-      <li class="modal__inputs-item">
-        <label class="modal__label">
-          <span class="visually-hidden">E-mail:</span>
-          <input class="modal__input" type="email" name="email" placeholder="E-mail">
-        </label>
-      </li>
-    </ul>
+          <li class="modal__inputs-item">
+            <label class="modal__label">
+              <span class="visually-hidden">E-mail:</span>
+              <input class="modal__input" type="email" name="email" placeholder="E-mail">
+            </label>
+          </li>
+        </ul>
 
-    <button class="modal__btn btn btn--modal" type="submit">Отправить</button>
-  </form>
-</div>
+        <button class="modal__btn btn btn--modal" type="submit">Отправить</button>
+        <button class="modal__close-btn" type="button">
+          <span class="visually-hidden">Закрыть форму</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</template>
 
-<div class="modal modal--form-success">
-  <p>
-    Форма успешно отправлена, спасибо! :)
-  </p>
-</div>
+<template id="form-success">
+  <div class="modal modal--form-success">
+    <p>
+      Форма успешно отправлена, спасибо! :)
+    </p>
+  </div>
+</template>
 
 <script src="js/script.js"></script>
 </body>
