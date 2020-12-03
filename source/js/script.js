@@ -5,6 +5,9 @@ var mainNavToggle = mainNav.querySelector('.main-nav__toggle');
 var mainNavList = mainNav.querySelector('.main-nav__list');
 
 var tabList = document.querySelector('.countries__tabs');
+var tabs = document.querySelectorAll('.countries__tab-link');
+var locationList = document.querySelector('.locations__list');
+var locatiolocationsnList = locationList.querySelectorAll('.location-card');
 var slideList = document.querySelector('.countries__slides');
 var slides = slideList.querySelectorAll('.countries__slide');
 
@@ -59,6 +62,24 @@ var onSlideListClick = function (evt) {
   changeSlide(evt.target.dataset.id);
 };
 
+var  onlocationCardClick = function (evt) {
+  var newTabId = evt.target.closest('.location-card').dataset.id;
+  var newTab;
+
+  for (var tab of tabs) {
+    if (tab.dataset.id === newTabId) {
+      newTab = tab;
+    };
+  }
+
+  var currentTab = tabList.querySelector('.countries__tab-link--current');
+
+  currentTab.classList.remove('countries__tab-link--current');
+  newTab.classList.add('countries__tab-link--current');
+
+  changeSlide(newTabId);
+};
+
 mainNav.classList.remove('main-nav--nojs');
 mainNav.classList.add('main-nav--closed');
 
@@ -70,4 +91,5 @@ mainNavToggle.addEventListener('click', function () {
   }
 });
 
+locationList.addEventListener('click', onlocationCardClick);
 tabList.addEventListener('click', onSlideListClick);
