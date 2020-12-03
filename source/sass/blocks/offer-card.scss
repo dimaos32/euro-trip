@@ -66,19 +66,27 @@
 }
 
 .offer-card__item {
+  display: flex;
+  align-items: start;
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 2;
   color: $offer-card--txt;
-}
 
-.offer-card__icon-check {
-  margin-left: 5px;
-  margin-right: 10px;
-  fill: $offer-card--icon;
+  svg {
+    flex-shrink: 0;
+    margin-top: 11px;
+    margin-left: 4px;
+    margin-right: 16px;
+    fill: $offer-card--icon;
 
-  .offer-card:hover & {
-    fill: $offer-card--icon-hover;
+    .offer-card:hover & {
+      fill: $offer-card--icon-hover;
+    }
+  }
+
+  p {
+    margin: 0;
   }
 }
 

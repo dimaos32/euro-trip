@@ -2,7 +2,7 @@
   margin-bottom: 200px;
   background-image: url("../img/main-bg-desktop@1x.jpg");
   background-color: $primary-screen--bg;
-  background-position: center top;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -48,6 +48,7 @@
   .primary-screen {
     margin-bottom: 80px;
     background-image: url("../img/main-bg-tablet@1x.jpg");
+    background-size: cover;
   }
 
   .primary-screen__container {
@@ -83,20 +84,18 @@
 @media (max-width: $tablet-width) and (min-resolution: 2dppx) {
   .primary-screen {
     background-image: url("../img/main-bg-tablet@2x.jpg");
-    background-size: 768px 344px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .primary-screen {
-    margin-bottom: 110px;
-    background:
-      url("../img/main-bg-mobile@1x.jpg") center top no-repeat,
-      linear-gradient(to bottom, $primary-screen--bg 235px, transparent 235px);
+    height: 235px;
+    margin-bottom: 345px;
+    background-image: url("../img/main-bg-mobile@1x.jpg");
   }
 
   .primary-screen__container {
-    min-height: 235px;
+    margin-bottom: -235px;
     padding-top: 80px;
     padding-bottom: 0;
   }
@@ -118,8 +117,6 @@
 
 @media (max-width: $mobile-width) and (min-resolution: 2dppx) {
   .primary-screen {
-    background:
-      url("../img/main-bg-mobile@2x.jpg") center top / 320px 235px no-repeat,
-      linear-gradient(to bottom, $primary-screen--bg 235px, transparent 235px);
+    background-image: url("../img/main-bg-mobile@2x.jpg");
   }
 }
