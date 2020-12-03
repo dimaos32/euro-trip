@@ -659,32 +659,39 @@
           <li class="modal__inputs-item">
             <label class="modal__label modal__label--phone">
               <span class="visually-hidden">Телефон:</span>
-              <input class="modal__input" type="tel" name="phone" placeholder="Введите 10 цифр номера" pattern="\d{10}" required>
+              <input class="modal__input" type="tel" name="phone" id="phone" placeholder="Введите 10 цифр номера" pattern="\d{10}" required>
             </label>
           </li>
 
           <li class="modal__inputs-item">
             <label class="modal__label">
               <span class="visually-hidden">E-mail:</span>
-              <input class="modal__input" type="email" name="email" placeholder="E-mail">
+              <input class="modal__input" type="email" name="email" id="email" placeholder="E-mail">
             </label>
           </li>
         </ul>
 
         <button class="modal__btn btn btn--modal" type="submit">Отправить</button>
-        <button class="modal__close-btn" type="button">
-          <span class="visually-hidden">Закрыть форму</span>
-        </button>
       </form>
+
+      <button class="modal__close-btn" type="button">
+        <span class="visually-hidden">Закрыть форму</span>
+      </button>
     </div>
   </div>
 </template>
 
 <template id="form-success">
-  <div class="modal modal--form-success">
-    <p>
-      Форма успешно отправлена, спасибо! :)
-    </p>
+  <div class="modal">
+    <div class="modal__content modal__content--form-success">
+      <p>
+        Форма успешно отправлена, спасибо! :)
+      </p>
+
+      <button class="modal__close-btn" type="button">
+        <span class="visually-hidden">Закрыть форму</span>
+      </button>
+    </div>
   </div>
 </template>
 

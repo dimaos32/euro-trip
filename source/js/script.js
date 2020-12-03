@@ -15,7 +15,13 @@ var offers = document.querySelector('.cost__offers');
 var buyFormTemplate = document.querySelector('#buy-now')
   .content
   .querySelector('.modal');
+var successMessageTemplate = document.querySelector('#form-success')
+  .content
+  .querySelector('.modal');
 var modal;
+
+var isStorageSupport = true;
+var storage = "";
 
 var openMenu = function () {
   mainNav.classList.remove('main-nav--closed');
@@ -67,6 +73,23 @@ var changeSlide = function (newSlideId) {
   newSlide.classList.add('countries__slide--current');
 }
 
+var removeModal = function () {
+  modal.remove();
+
+  document.removeEventListener('click', onOpenModalEscPress);
+}
+
+var openSuccessMessage = function () {
+  modal = successMessageTemplate.cloneNode(true);
+  var modalCloseBtn = modal.querySelector('.modal__close-btn');
+
+  document.body.append(modal);
+
+  modalCloseBtn.addEventListener('click', onModalCloseBtnClick);
+  modal.addEventListener('click', onOutsideModalContentClick);
+  document.addEventListener('keydown', onOpenModalEscPress);
+}
+
 var onOutsideMenuClick = function () {
   closeMenu();
 };
@@ -96,10 +119,20 @@ var onSlideListClick = function (evt) {
   }
 };
 
-var removeModal = function () {
-  modal.remove();
+var onModalFormSubmit = function (evt) {
+  evt.preventDefault();
 
-  document.removeEventListener('click', onOpenModalEscPress);
+  var customerPhone = modal.querySelector("#phone");
+  var customerEmail = modal.querySelector("#email");
+
+  if (isStorageSupport) {
+    localStorage.setItem("phone", customerPhone.value);
+    localStorage.setItem("email", customerEmail.value);
+  }
+
+  removeModal();
+
+  openSuccessMessage();
 }
 
 var onModalCloseBtnClick = function () {
@@ -125,14 +158,33 @@ var onBuyBtnClick = function (evt) {
 
     modal = buyFormTemplate.cloneNode(true);
     var modalCloseBtn = modal.querySelector('.modal__close-btn');
+    var modalForm = modal.querySelector('.modal__form');
+    var modalFormSubmitBtn = modalForm.querySelector('.modal__btn');
+    var customerPhone = modalForm.querySelector("#phone");
+    var customerEmail = modalForm.querySelector("#email");
 
     document.body.append(modal);
 
+    if (storage) {
+      customerPhone.value = storage;
+      customerEmail.value = localStorage.getItem("email");
+      modalFormSubmitBtn.focus();
+    } else {
+      customerPhone.focus();
+    }
+
+    modalForm.addEventListener('submit', onModalFormSubmit);
     modalCloseBtn.addEventListener('click', onModalCloseBtnClick);
     modal.addEventListener('click', onOutsideModalContentClick);
     document.addEventListener('keydown', onOpenModalEscPress);
   }
 };
+
+try {
+  storage = localStorage.getItem("phone");
+} catch (err) {
+  isStorageSupport = false;
+}
 
 mainNav.classList.remove('main-nav--nojs');
 mainNav.classList.add('main-nav--closed');
