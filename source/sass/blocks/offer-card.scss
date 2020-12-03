@@ -10,7 +10,8 @@
   border: 1px solid $offer-card--border;
   border-radius: 6px;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     padding: 28px;
     padding-top: 38px;
     border: 3px solid $offer-card--border-hover;
