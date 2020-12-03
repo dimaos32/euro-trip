@@ -7,9 +7,10 @@ var mainNavList = mainNav.querySelector('.main-nav__list');
 var tabList = document.querySelector('.countries__tabs');
 var tabs = document.querySelectorAll('.countries__tab-link');
 var locationList = document.querySelector('.locations__list');
-var locatiolocationsnList = locationList.querySelectorAll('.location-card');
 var slideList = document.querySelector('.countries__slides');
 var slides = slideList.querySelectorAll('.countries__slide');
+
+var offers = document.querySelector('.cost__offers');
 
 var openMenu = function () {
   mainNav.classList.remove('main-nav--closed');
@@ -73,17 +74,21 @@ var onOpenMenuEscPress = function (evt) {
 };
 
 var onlocationCardClick = function (evt) {
-  var newTabId = evt.target.closest('.location-card').dataset.id;
+  if (evt.target.closest('.location-card')) {
+    var newTabId = evt.target.closest('.location-card').dataset.id;
 
-  changeActiveTab(getNewActiveTab(newTabId));
-  changeSlide(newTabId);
+    changeActiveTab(getNewActiveTab(newTabId));
+    changeSlide(newTabId);
+  }
 };
 
 var onSlideListClick = function (evt) {
-  evt.preventDefault();
+  if (evt.target.classList.contains('countries__tab-link')) {
+    evt.preventDefault();
 
-  changeActiveTab(evt.target);
-  changeSlide(evt.target.dataset.id);
+    changeActiveTab(evt.target);
+    changeSlide(evt.target.dataset.id);
+  }
 };
 
 mainNav.classList.remove('main-nav--nojs');
