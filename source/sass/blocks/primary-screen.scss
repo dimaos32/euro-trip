@@ -31,7 +31,7 @@
 .primary-screen__desc {
   width: 375px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   line-height: 1.7;
   letter-spacing: -0.466667px;
   color: $primary-screen--txt;
@@ -72,7 +72,7 @@
 
   .primary-screen__desc {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: center;
   }
 
@@ -90,7 +90,7 @@
 @media (max-width: $mobile-width) {
   .primary-screen {
     height: 235px;
-    margin-bottom: 345px;
+    margin-bottom: 305px;
     background-image: url("../img/main-bg-mobile@1x.jpg");
   }
 

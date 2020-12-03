@@ -54,12 +54,10 @@
   }
 
   &--write-us {
-    width: 175px;
     padding: 17px 30px;
   }
 
   &--modal {
-    width: 175px;
     padding: 17px 30px;
   }
 }
@@ -68,6 +66,14 @@
   .btn {
     &--primary-screen {
       width: 340px;
+    }
+
+    &--write-us {
+      width: 175px;
+    }
+
+    &--modal {
+      width: 175px;
     }
   }
 }

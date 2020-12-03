@@ -10,7 +10,7 @@
 
 .country-slide__title {
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
   font-weight: 600;
   font-size: 55px;
   line-height: 1.64;
@@ -52,7 +52,7 @@
     &::after {
       position: absolute;
       content: "";
-      bottom: -23px;
+      bottom: -17px;
       left: 0;
       width: 175px;
       height: 3px;
@@ -120,6 +120,10 @@
   .country-slide__info {
     margin: 0 16px;
     margin-bottom: 50px;
+  }
+
+  .country-slide__title {
+    font-size: 24px;
   }
 
   .country-slide__feedback {

@@ -76,7 +76,6 @@
   svg {
     flex-shrink: 0;
     margin-top: 11px;
-    margin-left: 4px;
     margin-right: 16px;
     fill: $offer-card--icon;
 
@@ -112,13 +111,14 @@
   }
 
   .offer-card__title {
+    margin-bottom: 10px;
     font-size: 24px;
     line-height: 1.6;
   }
 
   .offer-card__desc {
     margin-bottom: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     text-align: center;
   }
 
@@ -128,5 +128,11 @@
 
   .offer-card__btn {
     margin: auto -21px -3px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .offer-card {
+    min-height: 625px;
   }
 }

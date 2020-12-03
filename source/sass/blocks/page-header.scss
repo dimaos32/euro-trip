@@ -9,6 +9,12 @@
   align-items: center;
 }
 
+@media (min-width: $desktop-width-only) {
+  .page-header__main-nav {
+    margin-right: 5px;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .page-header {
     margin-top: 18px;

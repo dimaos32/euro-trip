@@ -59,8 +59,7 @@
 
 @media (max-width: $tablet-width) {
   .countries__tabs-wrapper {
-    margin: 0;
-    margin-bottom: 35px;
+    margin: 0 15px 35px;
   }
 
   .countries__tabs {
@@ -68,12 +67,13 @@
   }
 
   .countries__tab:not(:last-of-type) {
-    margin-right: 100px;
+    margin-right: 80px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .countries__tabs-wrapper {
+    margin: 0;
     margin-bottom: 25px;
   }
 }

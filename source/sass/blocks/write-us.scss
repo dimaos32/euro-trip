@@ -98,6 +98,10 @@
 }
 
 @media (min-width: $desktop-width-only) {
+  .write-us {
+    transform: translateX(12px);
+  }
+
   .write-us__wrapper {
     width: 844px;
     min-height: 455px;
@@ -128,6 +132,10 @@
     transform: translate(50%, -50%);
   }
 
+  .write-us__title {
+    margin-bottom: 10px;
+  }
+
   .write-us__inputs-list {
     margin-bottom: 20px;
   }
@@ -145,14 +153,17 @@
     background: $write-us--bg;
   }
 
+  .write-us__wrapper {
+    min-height: 440px;
+  }
+
   .write-us__form {
     position: static;
     transform: none;
     width: 100%;
     padding: 50px 0;
-    background: none;
-
-    outline: 1px solid green;
+    background: transparent;
+    box-shadow: none;
   }
 
   .write-us__title {

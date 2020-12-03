@@ -7,6 +7,12 @@
   flex-wrap: wrap;
 }
 
+@media (min-width: $desktop-width-only) {
+  .page-footer{
+    transform: translateX(12px);
+  }
+}
+
 @media (max-width: $tablet-width) {
   .page-footer {
     margin-bottom: 50px;
